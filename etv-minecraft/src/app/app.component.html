@@ -4,7 +4,23 @@
 
 <mat-card>
   <mat-card-title>Server status</mat-card-title>
-  <p>
-    tes
-  </p>
+  <div *ngIf="!loaded">
+    <p>
+      Loading
+    </p>
+  </div>
+  <div *ngIf="loaded">
+    <h3>Latency</h3>
+    <p>
+      {{status.latency}}
+    </p>
+    <h3>Players online</h3>
+    <p>
+      {{status.players.online}} / {{status.players.max}}
+    </p>
+    <h3>Version</h3>
+    <p>
+      {{status.version.name}}
+    </p>
+  </div>
 </mat-card>

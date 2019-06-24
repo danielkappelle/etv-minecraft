@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {FlexLayoutModule} from '@angular/flex-layout';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 import {
   MatSidenavModule,
@@ -28,6 +30,7 @@ import {
     MatListModule,
     FlexLayoutModule,
     MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
