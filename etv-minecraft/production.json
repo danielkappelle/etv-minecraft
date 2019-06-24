@@ -1,0 +1,10 @@
+{
+  "apps": [
+      {
+          "name": "etv-minecraft",
+          "cwd": "./dist/etv-minecraft/",
+          "args": "-p 5001 -d false",
+          "script": "../../node_modules/http-server/bin/http-server"
+      }
+    ]
+}

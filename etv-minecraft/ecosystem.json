@@ -1,0 +1,14 @@
+{
+    "production" : {
+      "user" : "node_deploy",
+      "host" : "10.0.0.10",
+      "ref"  : "origin/master",
+      "repo" : "git@github.com:danielkappelle/etv-minecraft.git",
+      "path" : "/var/www/etv-minecraft/",
+      "post-deploy" : "cd etv-minecraft && npm install http-server && ng build --prod && pm2 startOrRestart production.json",
+      "env"  : {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
