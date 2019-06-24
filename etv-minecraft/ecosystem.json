@@ -6,7 +6,7 @@
       "ref"  : "origin/master",
       "repo" : "git@github.com:danielkappelle/etv-minecraft.git",
       "path" : "/var/www/etv-minecraft/",
-      "post-deploy" : "cd etv-minecraft && npm install http-server && ng build --prod && pm2 startOrRestart production.json",
+      "post-deploy" : "cd etv-minecraft && npm install http-server && npm install @angular/cli && ng build --prod && pm2 startOrRestart production.json",
       "env"  : {
         "NODE_ENV": "production"
       }
