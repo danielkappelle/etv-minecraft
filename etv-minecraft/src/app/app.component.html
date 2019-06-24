@@ -24,3 +24,23 @@
     </p>
   </div>
 </mat-card>
+
+<mat-card>
+    <mat-card-title>Players online</mat-card-title>
+    <div *ngIf="!loaded">
+        <p>
+          Loading
+        </p>
+      </div>
+    <div *ngIf="loaded && !status.players.online">
+      <p>
+        No players online.
+      </p>
+    </div>
+    <div *ngIf="loaded && status.players.online">
+      <mat-list>
+          <mat-list-item *ngFor="let player of status.players.sample">{{player.name}}</mat-list-item>
+      </mat-list>
+    </div>
+  </mat-card>
+
