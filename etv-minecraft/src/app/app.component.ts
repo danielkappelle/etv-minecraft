@@ -21,12 +21,15 @@ export class AppComponent implements OnInit {
   title = 'etv-minecraft';
 
   ngOnInit () {
+    this.updateData();
+    setInterval(this.updateData, 3000);
+  }
+
+  updateData = (): void => {
     this.http.get('https://api.minetools.eu/ping/etv.tudelft.nl/1723')
     .subscribe( (data: any) => {
-      console.log(data);
       this.status = data;
       this.loaded = true;
-
     });
   }
 }
