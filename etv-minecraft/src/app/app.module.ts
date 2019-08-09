@@ -15,6 +15,7 @@ import {
   MatIconModule,
   MatListModule,
   MatCardModule,
+  MatGridListModule,
 } from '@angular/material';
 
 @NgModule({
@@ -30,7 +31,8 @@ import {
     MatListModule,
     FlexLayoutModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

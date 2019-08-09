@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit {
   public status: any;
   public loaded: boolean;
+  public players: any;
 
   constructor(
     private http: HttpClient
@@ -30,6 +31,11 @@ export class AppComponent implements OnInit {
     .subscribe( (data: any) => {
       this.status = data;
       this.loaded = true;
+    });
+
+    this.http.get('https://minecraft-server.etv.tudelft.nl')
+    .subscribe( (data: any) => {
+      this.players = data;
     });
   }
 }
